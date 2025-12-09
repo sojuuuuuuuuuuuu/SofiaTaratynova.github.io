@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+/* Основной контейнер */
+.resume-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Левая часть - информация */
+.left-side {
+    flex: 2;
+}
+
+/* Правая часть - фотографии */
+.right-side {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Профиль с фото и именем */
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 25px;
+}
+
+.photo-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid #5d6afb;
+}
+
+.photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.name-block h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #2d3748;
+}
+
+.age {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+/* Секции */
+.section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #5d6afb;
+}
+
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #2d3748;
+}
+
+.section p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Навыки */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skills span {
+    background: #e0e7ff;
+    color: #5d6afb;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Фотографии справа */
+.photos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.big-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.big-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Маленькие фотографии */
+.small-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.small-photo {
+    aspect-ratio: 3/4;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.small-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .right-side {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .small-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .photo-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .name-block h1 {
+        font-size: 24px;
+    }
+}
